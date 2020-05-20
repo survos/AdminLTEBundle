@@ -247,6 +247,10 @@ class Configuration implements ConfigurationInterface
                 ->booleanNode('fixed_header')
                     ->defaultFalse()
                 ->end()
+            // deprecated!  But recipe hasn't been updated.
+                ->booleanNode('fixed_layout')
+                    ->defaultFalse()
+                ->end()
                 ->booleanNode('fixed_menu')
                     ->defaultFalse()
                 ->end()
