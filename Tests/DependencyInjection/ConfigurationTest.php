@@ -53,6 +53,7 @@ class ConfigurationTest extends TestCase
                     'fixed_header' => false,
                     'fixed_menu' => false,
                     'fixed_footer' => false,
+                    'fixed_layout' => false,
                     'boxed_layout' => false,
                     'collapsed_sidebar' => false,
                     'mini_sidebar' => true,

@@ -1,9 +1,34 @@
 services:
 
-    KevinPapst\AdminLTEBundle\Controller\:
-        resource: '../../Controller'
+
+#    KevinPapst\AdminLTEBundle\Controller\:
+#        resource: '../../Controller'
+#        tags: ['controller.service_arguments']
+#        autowire: false
+
+    KevinPapst\AdminLTEBundle\Controller\NavbarController:
+#        class: KevinPapst\AdminLTEBundle\Controller\NavbarController
         tags: ['controller.service_arguments']
-        autowire: true
+        arguments:
+            - '@event_dispatcher'
+            - '@admin_lte_theme.context_helper'
+        calls:
+            - [setContainer, ['@service_container']]
+
+    KevinPapst\AdminLTEBundle\Controller\SidebarController:
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@event_dispatcher'
+        calls:
+            - [setContainer, ['@service_container']]
+
+    KevinPapst\AdminLTEBundle\Controller\EmitterController:
+#        class: KevinPapst\AdminLTEBundle\Controller\NavbarController
+        tags: ['controller.service_arguments']
+        arguments:
+            - '@event_dispatcher'
+#        calls:
+#            - [setContainer, ['@service_container']]
 
     KevinPapst\AdminLTEBundle\Twig\AdminExtension:
         class: KevinPapst\AdminLTEBundle\Twig\AdminExtension

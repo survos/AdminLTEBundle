@@ -34,9 +34,9 @@
         "symfony/framework-bundle" : ">4.0",
         "friendsofphp/php-cs-fixer": "^2.10",
         "phpunit/phpunit": "^7.3",
-        "phpstan/phpstan": "^0.11.8",
-        "knplabs/knp-menu-bundle": "^2.2",
-        "phpstan/phpstan-phpunit": "^0.11"
+        "phpstan/phpstan": "^0.12",
+        "knplabs/knp-menu-bundle": "^3",
+        "phpstan/phpstan-phpunit": "^0.12"
     },
     "suggest" : {
         "knplabs/knp-menu-bundle" : "Allows easy menu integration",
